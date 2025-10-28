@@ -1,0 +1,120 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: bisque;
+  font-family: "Poppins", sans-serif;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.container {
+  width: 100%;
+  min-height: 100vh;
+  background: url("key.jpeg") no-repeat center/cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+}
+
+.circle-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 2rem;
+  width: 100%;
+  max-width: 1200px;
+  justify-items: center;
+}
+
+.circle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  color: white;
+  font-weight: 600;
+  text-transform: uppercase;
+  border-radius: 50%;
+  width: 14rem;
+  height: 14rem;
+  background-size: cover;
+  background-position: center;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  text-shadow: 0 2px 5px rgba(0, 0, 0, 0.6);
+}
+
+.circle:hover {
+  transform: scale(1.1);
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.6);
+}
+
+.circle.large {
+  width: 16rem;
+  height: 16rem;
+}
+
+.circle.wide {
+  width: 20rem;
+  height: 14rem;
+  border-radius: 50% / 40%;
+}
+
+.rainbow-text {
+  font-size: 2rem;
+  font-weight: bold;
+  text-align: center;
+  letter-spacing: 0.1rem;
+  text-transform: uppercase;
+  background: linear-gradient(90deg, red, orange,aqua, rgb(241, 91, 169), rgb(182, 11, 19), rgb(144, 3, 245), rgb(249, 2, 2));
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  -webkit-text-fill-color: transparent;
+  animation: rainbow 5s linear infinite;
+  text-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+}
+
+@keyframes rainbow {
+  0% {
+    background-position: 0% 50%;
+  }
+  100% {
+    background-position: 100% 50%;
+  }
+}
+
+@media (max-width: 768px) {
+  .circle {
+    width: 10rem;
+    height: 10rem;
+    font-size: 0.8rem;
+  }
+  .circle.large,
+  .circle.wide {
+    width: 12rem;
+    height: 10rem;
+  }
+  .rainbow-text {
+    font-size: 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .circle {
+    width: 8rem;
+    height: 8rem;
+    font-size: 0.7rem;
+  }
+  .rainbow-text {
+    font-size: 1.2rem;
+  }
+}

@@ -1,0 +1,96 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: aqua; 
+  font-family: sans-serif;
+  color: #333;
+}
+
+.main {
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.section {
+  height: auto;
+  min-height: 12rem;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  padding: 20px;
+  position: relative;
+  overflow: hidden;
+}
+
+.section .content {
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+.section .content h2 {
+  flex: 1;
+  font-size: 2rem;
+  margin-right: 20px;
+}
+
+.section .content p {
+  flex: 2;
+  font-size: 1rem;
+}
+
+.square {
+  flex: 0 0 auto;
+  height: 9rem;
+  width: 9rem;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 3rem;
+  opacity: 0;
+  transform: translateX(-150%);
+  animation: slideFadeIn 1s ease-out forwards;
+}
+
+
+.st1 { background-color: rgb(188, 150, 150); }
+.st2 { background-color: #222; color: #eee; }
+.st3 { background-color: #444; color: #eee; }
+.st4 { background-color: #555; color: #eee; }
+.st5 { background-color: #666; color: #eee; }
+
+.s1 { background-color: brown; animation-delay: 0.2s; }
+.s2 { background-color: aqua; animation-delay: 0.4s; }
+.s3 { background-color: #00aaff; animation-delay: 0.6s; }
+.s4 { background-color: #ff9900; animation-delay: 0.8s; }
+.s5 { background-color: #ff4444; animation-delay: 1.0s; }
+
+@keyframes slideFadeIn {
+  from {
+    transform: translateX(-150%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+
+@media (max-width: 768px) {
+  .section .content {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  .square {
+    margin-top: 20px;
+  }
+}

@@ -1,0 +1,111 @@
+body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    color: #fff;
+    background: linear-gradient(-45deg, #0a0a0a, #1e1e2f, #111, #292944);
+    background-size: 400% 400%;
+    animation: gradientMove 15s ease infinite;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding-top: 40px;
+}
+
+.title {
+    text-align: center;
+    font-size: 2.5rem;
+    text-shadow: 0 0 15px #00ffe5;
+    margin-bottom: 30px;
+}
+
+.container {
+    width: 90%;
+    max-width: 700px;
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(10px);
+    border-radius: 15px;
+    padding: 20px;
+    box-shadow: 0 0 30px rgba(0, 255, 234, 0.1);
+}
+
+.edu-btn {
+    width: 100%;
+    background: linear-gradient(90deg, #00ffe5, #0080ff);
+    color: #000;
+    font-weight: bold;
+    border: none;
+    padding: 15px;
+    text-align: left;
+    border-radius: 10px;
+    margin: 10px 0;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-size: 1.1rem;
+}
+
+.edu-btn:hover {
+    background: linear-gradient(90deg, #00b3ff, #00ffe5);
+    transform: scale(1.02);
+    box-shadow: 0 0 15px #00ffe5;
+}
+
+.edu-content {
+    max-height: 0;
+    overflow: hidden;
+    background: rgba(255, 255, 255, 0.08);
+    border-left: 4px solid #00ffe5;
+    border-radius: 0 10px 10px 0;
+    margin-bottom: 15px;
+    padding: 0 15px;
+    transition: max-height 0.5s ease, padding 0.3s ease;
+}
+
+.edu-content p, .edu-content ul {
+    margin: 10px 0;
+}
+
+.edu-content ul {
+    padding-left: 20px;
+}
+
+.nested-btn {
+    width: 100%;
+    background: linear-gradient(90deg, #ffa500, #ff4500);
+    color: #000;
+    font-weight: bold;
+    border: none;
+    padding: 12px;
+    text-align: left;
+    border-radius: 8px;
+    margin: 8px 0;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-size: 1rem;
+}
+
+.nested-btn:hover {
+    background: linear-gradient(90deg, #ff8c00, #ffa500);
+    transform: scale(1.02);
+    box-shadow: 0 0 12px #ffa500;
+}
+
+.nested-content {
+    max-height: 0;
+    overflow: hidden;
+    background: rgba(255,255,255,0.05);
+    border-left: 4px solid #ffa500;
+    border-radius: 0 8px 8px 0;
+    margin-bottom: 10px;
+    padding: 0 12px;
+    transition: max-height 0.4s ease, padding 0.3s ease;
+}
+
+.nested-item.active .nested-content {
+    /* We'll toggle padding via JS or class */
+}
+@keyframes gradientMove {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}

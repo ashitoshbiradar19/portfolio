@@ -1,0 +1,55 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ashitosh Biradar – Personal Site</title>
+  <link rel="stylesheet" href="style3.css" >
+</head>
+<body>
+
+  <div class="box">
+  
+    <div class="text">
+      <h1>Hi,<br>Welcome to my port-folio.</h1>
+    </div>
+    <div class="image-wrapper">
+      <img src="ashitosh.jpeg" alt="Ashitosh Biradar">
+    </div>
+  </div>
+
+  <hr>
+
+  <div class="last">
+    <button><a href="index4.html">Here I am!!</a></button>
+  </div>
+
+  <div class="media">
+    <p><img src="insaticon1.png" alt="" class="src"> @ashitosh_biradar_19</p>
+    <p><img src="facebookicon.png" alt="" class="src"> Ashitosh_Biradar</p>
+    <p><img src="linkedin logo.png" alt="" class="src"> Ashitosh Biradar</p>
+    <p><img src="snapicon.png" alt="" class="src"> @ashitosh235143</p>
+  </div>
+
+  <div class="note">
+    * Do not judge my site by thinking I can make better than this.
+    <h3> @Designed & powered by :Ashitosh_Biradar</h3>
+  </div>
+
+
+  <script>
+ 
+    const imgWrap = document.querySelector('.image-wrapper');
+    let direction = 1;
+    setInterval(() => {
+      imgWrap.style.transform = `scale(1.02) translateY(${direction*2}px)`;
+      direction = -direction;
+    }, 3000);
+  </script>
+
+</body>
+</html> 
+
+
+
