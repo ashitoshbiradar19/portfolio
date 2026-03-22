@@ -168,10 +168,10 @@ body {
 .media p:nth-child(4) {
   animation-delay: 2.2s;
 }
-
 .media img.src {
-  width: 24px;
-  height: 24px;
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
 }
 
 hr {
